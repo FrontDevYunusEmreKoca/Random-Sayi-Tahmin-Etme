@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Sayi Tahmin Etme</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body class="bg-dark">
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <div class="title">
+                    <h2>Random Sayı Tahmin Etme</h2>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="hak">
+                    <i class="fa-solid fa-heart text-danger fs-3"></i>
+                    <i class="fa-solid fa-heart text-danger fs-3"></i>
+                    <i class="fa-solid fa-heart text-danger fs-3"></i>
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text " id="basic-addon1">Bir Sayi Tahmin Et</span>
+
+                    <input type="number" class="form-control" placeholder="0 - 100" aria-label="Username" aria-describedby="basic-addon1" id="input_number">
+                </div>
+                <div class="sonuc">
+                    <span id="randomSayiSonuc"></span>
+                    <br>
+                    <span id="kalan_hak"></span>
+                </div>
+                <div class="btn">
+                    <button class="btn btn-danger tahmin_et " style="width: 100%;">Tahmin Et</button>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
