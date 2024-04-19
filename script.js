@@ -42,15 +42,27 @@ if (heart != 0 ){
    
     if (input_sayi == ""){
         document.getElementById("randomSayiSonuc").innerText = "  Lutfen bir tam sayi giriniz";
+        var tekrar_oyna = document.querySelector(".tekrar-oyna ");
+         tekrar_oyna.addEventListener("click", function (){
+        location.reload();
+})
+        
     }
     else {
-        if (input_sayi > 100 && input_sayi < 0){
+        var deneme = parseInt(input_sayi) 
+        console.log("avasdsadasds" + deneme)
+        if ( deneme >100 || deneme <0){
+           
+            console.log(input_sayi)
             document.getElementById("randomSayiSonuc").innerText = "  Random Sayı 0 ile 100 arasındadır Lütfen geçerli bir sayı giriniz ";
+            console.log("sadas")
         }
         else{
             console.log("random sayi " + randomSayi);
             if (randomSayi == input_sayi){
-                document.getElementById("randomSayiSonuc").innerText = "Random sayıyı bildiniz."
+                document.getElementById("randomSayiSonuc").innerText = "Random sayıyı bildiniz.";
+                
+                
             }
             else {
                 if (randomSayi > input_sayi){
@@ -85,12 +97,23 @@ if (heart != 0 ){
    
 }
 else {
-    document.getElementById("randomSayiSonuc").style.display = "none"; 
-    document.getElementById("kalan_hak").innerHTML = `<span> Tahmin Etme Hakkınız Bitmiştir. </span>`
-    document.getElementById("kalan_hak").style.paddingBottom = "20px"
-    document.querySelector(".hak").style.display = "none"
-    document.querySelector(".tekrar-oyna ").style.display = "block";
-    document.querySelector(".tahmin_et ").style.display = "none";
+    if (randomSayi == input_sayi){
+        document.getElementById("randomSayiSonuc").innerText = "Random sayıyı bildiniz."
+        document.getElementById("kalan_hak").innerText = "";
+        
+    
+
+    }
+    else{
+        document.getElementById("randomSayiSonuc").style.display = "none"; 
+        document.getElementById("kalan_hak").innerHTML = `<span> Tahmin Etme Hakkınız Bitmiştir. Random olarak üretilen sayı ${randomSayi}</span>`
+        document.getElementById("kalan_hak").style.paddingBottom = "20px"
+        document.querySelector(".hak").style.display = "none"
+        document.querySelector(".tekrar-oyna ").style.display = "block";
+        document.querySelector(".tahmin_et ").style.display = "none";
+    }
+
+  
 }
 var tekrar_oyna = document.querySelector(".tekrar-oyna ");
 tekrar_oyna.addEventListener("click", function (){
